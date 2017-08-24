@@ -2,85 +2,174 @@
 @import "mixins.less";
 
 .light-gray-bg {
-	background-color: @light-gray-color;
+    background-color: @light-gray-color;
 }
 
 .dark-bg {
-	background-color: @dark-color;
+    background-color: @dark-color;
 }
 
 .gray-bottom {
-	border-bottom: 1px solid @gray-bottom;
+    border-bottom: 1px solid @gray-bottom;
 }
 
+a {
+    color: @dark-color;
+
+    &.minima-btn {
+        color: @light-color;
+        background-color: @gray-color;
+        border-radius: 30px;
+        padding: 12px 80px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+
+
+
 nav {
-	.container {
-		min-height: 105px;
-	}
+    padding-top: 50px;
+
+    .nav>li>a:focus,
+    .nav>li>a:hover {
+        text-decoration: underline;
+        background-color: transparent;
+        color: @gray-color;
+    }
+
+
+    a {
+        color: @gray-color;
+    }
+    .container {
+        min-height: 60px;
+    }
 }
 
 header {
-	
-	background: url('../img/header-bg.jpg') no-repeat top center;
-	background-size: cover;
 
-	.container {
-		min-height: 640px;
-		text-align: center;
-	}
+    background: url('../img/header-bg.jpg') no-repeat top center;
+    background-size: cover;
+
+    .container {
+        min-height: 640px;
+        text-align: center;
+    }
 }
 
 #process {
-	.container {
-		min-height: 415px;
-	}
+    .container {
+        min-height: 415px;
+    }
+
+    img {
+        margin: 100px auto 20px;
+        display: block;
+    }
 }
 
 
 #promo {
-	.container {
-		min-height: 610px;
-	}
+    .container {
+        min-height: 610px;
+    }
 }
 
 
 #recent-work {
-	.container {
-		min-height: 605px;
-	}
+    .container {
+        min-height: 605px;
+    }
 }
 
 #subscribe {
-	.container {
-		min-height: 355px;
-	}
+    .container {
+        min-height: 355px;
+    }
 }
 
 #social-icons {
-	.container {
-		min-height: 260px;
-	}
+    .container {
+        min-height: 260px;
+    }
+
+
+    span {
+        border: 1.3px solid @dark-color;
+        padding-top: 20px;
+        text-align: center;
+        width: 70px;
+        height: 70px;
+        display: block;
+        transition: all 0.30s;
+
+        &:hover {
+            background-color: #55acee;
+            border-color: #55acee;
+            color: @light-color;
+            cursor: pointer;
+        }
+    }
+
+    .icons-wrapper {
+        margin-top: 100px;
+    }
 }
 
 footer {
-	.container {
-		min-height: 350px;
-	}
+
+    color: @light-color;
+    .container {
+        min-height: 350px;
+    }
 }
 
-h1,h2,h3,h4,p, .minima-btn {
-	text-align: center;
+
+.navbar-header {
+    .navbar-brand {
+        font-size: 40px;
+        font-family: Flatform Light;
+        font-weight: 100;
+    }
 }
 
-h2,h3,h4, .minima-btn {
-	text-transform: uppercase;
+#minima-menu {
+    li {
+        font-size: 18px;
+        padding-left: 10px;
+    }
 }
 
-a {
-	color: @dark-color;
+h1,
+h2,
+h3,
+h4,
+p,
+.minima-btn {
+    text-align: center;
+}
 
-	&.minima-btn {
-		color: @light-color;
-		background-color: @gray-color;
-	}
+h2,
+h3,
+h4,
+.minima-btn {
+    text-transform: uppercase;
+}
+
+
+.video-wrapper {
+    background: url(../img/video.png) no-repeat top center;
+    background-size: cover;
+    max-width: 100%;
+    height: 383px;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 145px;
+        left: 50%;
+        margin-left: -45px;
+    }
 }
